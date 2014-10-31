@@ -50,7 +50,11 @@ function openAllNotes(e) {
 			tabs.push(postLink);
 		}
 
-		// Mark notification as read
+		// Make sure post is marked as read
+		data.unread = 0;
+		element.setAttribute('data-gt', JSON.stringify(data));
+
+		// Mark notification as read via Facebook interface
 		if (markAsReadButton !== undefined) markAsReadButton.click();
 	});
 
