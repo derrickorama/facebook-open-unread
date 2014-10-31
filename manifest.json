@@ -1,6 +1,5 @@
 {
-	"name": "facebook-open-unread",
-	"title": "Facebook - Open Unread",
+	"name": "Facebook - Open Unread",
 	"version": "2.0",
 	"manifest_version": 2,
 	"description": "Enables you to quickly open unread notifications.",
