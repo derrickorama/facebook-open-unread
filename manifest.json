@@ -1,0 +1,27 @@
+{
+	"name": "Facebook Simple Notes",
+	"version": "2.0",
+	"manifest_version": 2,
+	"description": "Consolidates notifications and enables you to quickly open unread notifications.",
+	"icons": {
+		"128": "images/icon128.png",
+		"16": "images/icon16.png",
+		"32": "images/icon32.png",
+		"48": "images/icon48.png"
+	},
+	"background": {
+		"persistent": false,
+		"scripts": ["tabs.js"]
+	},
+	"content_scripts": [{
+		"js": [
+			"elements.js",
+			"main.js"
+		],
+		"matches": [
+			"http://*.facebook.com/*",
+			"https://*.facebook.com/*"
+		]
+	}],
+	"permissions": ["tabs"]
+}
