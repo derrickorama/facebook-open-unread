@@ -7,4 +7,4 @@ Enables you to quickly open unread notifications.
 
 The link will appear in the same area as "Mark as Read" and "Settings":
 
-![Open all in new tabs](images/opan-all-screenshot.png)
+![Open unread in new tabs](images/opan-all-screenshot.png)

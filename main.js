@@ -12,7 +12,7 @@ openNotesButton.addEventListener('click', function initialize() {
 		id: 'FBSN_OpenAll',
 		href: '#',
 		role: 'button'
-	}, 'Open all in new tabs');
+	}, 'Open unread in new tabs');
 	var dot = textNode(' · ');
 
 	openAllLink.addEventListener('click', openAllNotes);
