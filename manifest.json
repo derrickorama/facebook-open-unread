@@ -1,8 +1,8 @@
 {
-	"name": "Facebook Simple Notes",
+	"name": "Facebook - Open Unread",
 	"version": "2.0",
 	"manifest_version": 2,
-	"description": "Consolidates notifications and enables you to quickly open unread notifications.",
+	"description": "Enables you to quickly open unread notifications.",
 	"icons": {
 		"128": "images/icon128.png",
 		"16": "images/icon16.png",
