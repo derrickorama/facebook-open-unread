@@ -43,7 +43,16 @@ function openAllNotes(e) {
 		// Get data from each notification
 		var data = JSON.parse(element.getAttribute('data-gt'));
 		// Get link to post
-		var postLink = element.querySelectorAll('a')[0].href.replace(/\?.*/gi, '');
+		var postLink = element.querySelectorAll('a')[0].href;
+
+		if (postLink.indexOf('/photo.php') < 0) {
+			// Remove querystring (except on photo.php)
+			postLink = postLink.replace(/\?.*/gi, '');
+		} else {
+			// Remove extra querystring params for photo.php
+			postLink = postLink.replace(/&(?:type|ref|notif_t)=[^&]+/gi, '');
+		}
+
 
 		// If notification is unread, open the post
 		if (data.unread && tabs.indexOf(postLink) < 0) {
