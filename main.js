@@ -43,7 +43,12 @@ function openAllNotes(e) {
 		// Get data from each notification
 		var data = JSON.parse(element.getAttribute('data-gt'));
 		// Get link to post
-		var postLink = element.querySelectorAll('a')[0].href.replace(/\?.*/gi, '');
+		var postLink = element.querySelectorAll('a')[0].href;
+
+		// Don't remove querystrings from videos/photos/media sets
+		if (postLink.match(/(?:(video|photo)\.php|\/media\/set)/gi) === null) {
+			postLink = postLink.replace(/\?.*/gi, '');
+		}
 
 		// If notification is unread, open the post
 		if (data.unread && tabs.indexOf(postLink) < 0) {
