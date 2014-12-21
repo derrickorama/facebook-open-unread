@@ -45,9 +45,12 @@ function openAllNotes(e) {
 		// Get link to post
 		var postLink = element.querySelectorAll('a')[0].href;
 
-		// Don't remove querystrings from videos/photos/media sets
+		// Don't remove entire querystring from videos/photos/media sets
 		if (postLink.match(/(?:(video|photo)\.php|\/media\/set)/gi) === null) {
 			postLink = postLink.replace(/\?.*/gi, '');
+		} else {
+			// Remove extra querystring params
+			postLink = postLink.replace(/&(?:type|ref|notif_t)=[^&]+/gi, '');
 		}
 
 		// If notification is unread, open the post
